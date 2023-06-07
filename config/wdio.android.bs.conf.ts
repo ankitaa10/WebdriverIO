@@ -30,13 +30,13 @@ config.capabilities = [
     "appium:autoGrantPermissions": true
    }
 
-// {
-//     platformName: "iOS",
-//     "appium:platformVersion": "14.0",
-//     "appium:deviceName": "iPhone 12 ",
-//     "appium:automationName": "XCUITest",
-//     "appium:app": "bs://135a42164a53cf833ef36207188840958091a739",
-//   }
+//  {
+//      platformName: "iOS",
+//      "appium:platformVersion": "14.0",
+//      "appium:deviceName": "iPhone 12 ",
+//      "appium:automationName": "XCUITest",
+//      "appium:app": "bs://135a42164a53cf833ef36207188840958091a739",
+//    }
 ]
 
 //

@@ -1,14 +1,17 @@
-import container  from '../../../../container';
-import { LoginPage } from "../../support/module/sauce_login/LoginPage.screen";
+import { Container } from 'inversify';
+
 import "reflect-metadata";
 
 import userData from '../../fixtures/sauce_credentials.json';
+import { LoginPage1 } from '../../support/module/LoginPage1.screen';
+ 
+const container = new Container();
+container.bind(LoginPage1).toSelf();
+const loginPage = container.get(LoginPage1);
  
 
-
-
 describe('Swag Labs', () => {
-  const loginPage = container.get(LoginPage);
+
   it('login functionality check', async () => {
       await loginPage.performLogin(userData.validCredentials.userName, userData.validCredentials.password);
       await loginPage.checkMessage();

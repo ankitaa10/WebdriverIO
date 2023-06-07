@@ -1,6 +1,3 @@
-
-
-
 import { injectable } from "inversify";
 
 import "reflect-metadata";
@@ -9,7 +6,7 @@ import "reflect-metadata";
 
 
 @injectable()
-      export class LoginPage{
+      export class LoginPage1{
         get usernameBtn() {
             return $('~test-Username');
         }
@@ -26,10 +23,10 @@ import "reflect-metadata";
             await this.loginbtn.click()
         }
         async checkMessage(){
-            
-            const productText = await $('//android.widget.TextView[@text ="PRODUCTS"]');
-            await expect(productText).toHaveText("PRODUCTS");
-            
+            const backpackElement = await $("-ios class chain:**/XCUIElementTypeStaticText[`label == 'Sauce Labs Backpack'`]");
+            const backpackText = await backpackElement.getText();
+            expect(backpackText).toContain("Sauce Labs Backpack");
+
         }
        
     }
