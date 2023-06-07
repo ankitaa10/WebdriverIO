@@ -1,15 +1,16 @@
 import container  from '../../../../container';
-import { LoginPage, LoginPage1 } from "../../support/module/sauce_login/LoginPage.screen";
+import { BaseLoginPage, LoginPage, LoginPage1 } from "../../support/module/sauce_login/LoginPage.screen";
 import "reflect-metadata";
 
 import userData from '../../fixtures/sauce_credentials.json';
- 
+const loginPage = container.get<BaseLoginPage>('LoginPage');
+const loginPage1 = container.get<BaseLoginPage>('LoginPage1');
 
 
 
 describe('Swag Labs', () => {
-  const loginPage = container.get(LoginPage);
-  const loginPage1 = container.get(LoginPage1);
+  // const loginPage = container.get(LoginPage);
+  // const loginPage1 = container.get(LoginPage1);
   it('login functionality check', async () => {
       await loginPage.performLogin(userData.validCredentials.userName, userData.validCredentials.password);
       await loginPage.checkMessage();
