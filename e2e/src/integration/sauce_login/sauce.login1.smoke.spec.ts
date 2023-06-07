@@ -3,7 +3,7 @@ import { Container } from 'inversify';
 import "reflect-metadata";
 
 import userData from '../../fixtures/sauce_credentials.json';
-import { LoginPage1 } from '../../support/module/LoginPage1.screen';
+import { LoginPage1 } from '../../support/module/sauce_login/LoginPage1.screen';
  
 const container = new Container();
 container.bind(LoginPage1).toSelf();
