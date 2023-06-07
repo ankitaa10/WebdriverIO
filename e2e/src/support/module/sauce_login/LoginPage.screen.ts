@@ -5,11 +5,23 @@ import { injectable } from "inversify";
 
 import "reflect-metadata";
 
+@injectable() 
+export abstract class BaseLoginPage { 
+    abstract get usernameBtn();
+    abstract get passwordBtn();
+    abstract get loginbtn();
 
+    abstract checkMessage();
+    
+    async performLogin(username: string, password: string) {
+         await this.usernameBtn.setValue(username); 
+         await this.passwordBtn.setValue(password); 
+         await this.loginbtn.click(); 
+        } }
 
 
 @injectable()
-      export class LoginPage{
+      export class LoginPage extends BaseLoginPage{
         get usernameBtn() {
             return $('~test-Username');
         }
@@ -20,11 +32,6 @@ import "reflect-metadata";
             return $('~test-LOGIN');
         }
     
-       async performLogin(username, password){
-            await this.usernameBtn.setValue(username)
-            await this.passwordBtn.setValue(password)
-            await this.loginbtn.click()
-        }
         async checkMessage(){
             
             const productText = await $('//android.widget.TextView[@text ="PRODUCTS"]');
@@ -34,3 +41,24 @@ import "reflect-metadata";
        
     }
     
+    @injectable()
+      export class LoginPage1 extends BaseLoginPage{
+        get usernameBtn() {
+            return $('~test-Username');
+        }
+        get passwordBtn() {
+            return $('~test-Password');
+        }
+        get loginbtn() {
+            return $('~test-LOGIN');
+        }
+    
+      
+        async checkMessage(){
+            const backpackElement = await $("-ios class chain:**/XCUIElementTypeStaticText[`label == 'Sauce Labs Backpack'`]");
+            const backpackText = await backpackElement.getText();
+            expect(backpackText).toContain("Sauce Labs Backpack");
+
+        }
+       
+    }
