@@ -13,7 +13,7 @@ config.key = process.env.BROWSERSTACK_KEY;
 // Specs
 // ============
 config.specs = [
-  '../e2e/src/integration/sauce_login/sauce.login1.smoke.spec.ts'
+  '../e2e/src/integration/sauce_login/sauce.login.smoke.spec.ts'
 ];
 
 //
