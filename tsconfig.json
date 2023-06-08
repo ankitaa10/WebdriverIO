@@ -12,7 +12,9 @@
             "@wdio/appium-service"
         ],
         "target": "es2022",
+       
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true
+
     }
 }

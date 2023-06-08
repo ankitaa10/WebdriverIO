@@ -1,10 +1,8 @@
-
-
-
 import { injectable } from "inversify";
 
 import "reflect-metadata";
-
+export const symbolLoginPage = Symbol.for("LoginPage")
+export const symbolLoginPage1 = Symbol.for("LoginPage1")
 @injectable() 
 export abstract class BaseLoginPage { 
     abstract get usernameBtn();
@@ -19,7 +17,7 @@ export abstract class BaseLoginPage {
          await this.loginbtn.click(); 
         } }
 
-export const symbolLoginPage = Symbol.for("LoginPage")
+
 @injectable()
       export class LoginPage extends BaseLoginPage{
         get usernameBtn() {
@@ -40,7 +38,7 @@ export const symbolLoginPage = Symbol.for("LoginPage")
         }
        
     }
-    export const symbolLoginPage1 = Symbol.for("LoginPage1")
+  
     @injectable()
       export class LoginPage1 extends BaseLoginPage{
         get usernameBtn() {

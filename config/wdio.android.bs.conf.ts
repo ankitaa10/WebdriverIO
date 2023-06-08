@@ -21,14 +21,14 @@ config.specs = [
 // Capabilities
 // ============
 config.capabilities = [
-   {
-     platformName: "Android",
-     "appium:platformVersion": "12.0",
-     "appium:deviceName": "Samsung Galaxy S22 Ultra",
-     "appium:automationName": "UIAutomator2",
-    "appium:app": "bs://dfd9d8063dbc96978951a6d776d92f08e53848ec",
-    "appium:autoGrantPermissions": true
-   },
+  //  {
+  //    platformName: "Android",
+  //    "appium:platformVersion": "12.0",
+  //    "appium:deviceName": "Samsung Galaxy S22 Ultra",
+  //    "appium:automationName": "UIAutomator2",
+  //   "appium:app": "bs://dfd9d8063dbc96978951a6d776d92f08e53848ec",
+  //   "appium:autoGrantPermissions": true
+  //  },
 
  {
      platformName: "iOS",
