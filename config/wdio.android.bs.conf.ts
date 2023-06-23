@@ -28,7 +28,7 @@ config.capabilities = [
   //    "appium:automationName": "UIAutomator2",
   //   "appium:app": "bs://dfd9d8063dbc96978951a6d776d92f08e53848ec",
   //   "appium:autoGrantPermissions": true
-  //  },
+  //  }
 
  {
      platformName: "iOS",

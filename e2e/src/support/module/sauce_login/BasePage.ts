@@ -1,9 +1,15 @@
-// export abstract class BaseLoginPage { 
-//     abstract get usernameBtn();
-//     abstract get passwordBtn();
-//     abstract get loginbtn();
-//     abstract get checkMessage();
+import { injectable } from "inversify";
+
+@injectable() 
+export abstract class BaseLoginPage { 
+    abstract get usernameBtn();
+    abstract get passwordBtn();
+    abstract get loginbtn();
+
+    abstract checkMessage();
     
-//     abstract performLogin(username: string, password: string);
-//     abstract getcheckMessage();
-// } 
+    async performLogin(username: string, password: string) {
+         await this.usernameBtn.setValue(username); 
+         await this.passwordBtn.setValue(password); 
+         await this.loginbtn.click(); 
+        } }
