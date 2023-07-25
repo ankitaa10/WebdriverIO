@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import { BaseCheckoutPage } from "./BasePage";
+import { BaseCheckoutPage } from "./CheckoutPage";
 export const symbolCheckoutPage = Symbol.for("CheckoutPage");
 @injectable()
       export class CheckoutPage extends BaseCheckoutPage{
@@ -14,7 +14,7 @@ export const symbolCheckoutPage = Symbol.for("CheckoutPage");
         }
     
         async continuebtn(){
-            const continueElement = await $('~test-CONTINUE');
+            const continueElement = await $('//android.view.ViewGroup[@content-desc="test-CONTINUE"]/android.widget.TextView');
             continueElement.click();
         }
        

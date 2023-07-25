@@ -2,7 +2,7 @@
 import { injectable } from "inversify";
 
 import "reflect-metadata";
-import { BaseLoginPage } from "./BasePage";
+import { BaseLoginPage } from "./LoginPage";
 export const symbolLoginPage1 = Symbol.for("LoginPage1")
 @injectable()
 export class LoginPage1 extends BaseLoginPage{

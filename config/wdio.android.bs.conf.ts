@@ -21,22 +21,22 @@ config.specs = [
 // Capabilities
 // ============
 config.capabilities = [
-  //  {
-  //    platformName: "Android",
-  //    "appium:platformVersion": "12.0",
-  //    "appium:deviceName": "Samsung Galaxy S22 Ultra",
-  //    "appium:automationName": "UIAutomator2",
-  //   "appium:app": "bs://dfd9d8063dbc96978951a6d776d92f08e53848ec",
-  //   "appium:autoGrantPermissions": true
-  //  }
-
- {
-     platformName: "iOS",
-     "appium:platformVersion": "14.0",
-     "appium:deviceName": "iPhone 12 ",
-     "appium:automationName": "XCUITest",
-     "appium:app": "bs://135a42164a53cf833ef36207188840958091a739",
+   {
+     platformName: "Android",
+     "appium:platformVersion": "12.0",
+     "appium:deviceName": "Samsung Galaxy S22 Ultra",
+     "appium:automationName": "UIAutomator2",
+    "appium:app": "bs://dfd9d8063dbc96978951a6d776d92f08e53848ec",
+    "appium:autoGrantPermissions": true
    }
+
+//  {
+//      platformName: "iOS",
+//      "appium:platformVersion": "14.0",
+//      "appium:deviceName": "iPhone 12 ",
+//      "appium:automationName": "XCUITest",
+//      "appium:app": "bs://135a42164a53cf833ef36207188840958091a739",
+//    }
 ]
 
 //

@@ -1,5 +1,5 @@
 import { injectable } from "inversify";
-import { BaseCheckoutPage } from "./BasePage";
+import { BaseCheckoutPage } from "./CheckoutPage";
 export const symbolCheckoutPage1 = Symbol.for("CheckoutPage1");
 @injectable()
       export class CheckoutPage1 extends BaseCheckoutPage{
