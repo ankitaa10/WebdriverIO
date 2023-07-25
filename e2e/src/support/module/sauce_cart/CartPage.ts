@@ -13,9 +13,7 @@ import { injectable } from "inversify";
 
 @injectable() 
 export abstract class BaseItemsPage {
-    // abstract get removeBtn();
-   
-    // abstract get remove();
+
    
    abstract removeBtn();
    abstract checkOutBtn();

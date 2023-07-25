@@ -5,16 +5,14 @@ import "reflect-metadata";
 export const symbolItemsPage1 = Symbol.for("ItemsPage1");
 @injectable()
 export class ItemsPage1 extends BaseItemsPage{
-    // async removeBtn() {
-    //   return $('//XCUIElementTypeOther[@name="test-REMOVE"]');
-    // }
+  
     async removeBtn(){
         const removeElement = await $('(//XCUIElementTypeOther[@name="test-REMOVE"])[1]');
         const remove = await removeElement.click();
     }
     async checkOutBtn(){
         const checkOutElement = await $('~test-CHECKOUT');
-      //  const checkOut = await checkOutElement.click();
+     
         checkOutElement.click();
     }
 }
